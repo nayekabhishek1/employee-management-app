@@ -13,12 +13,11 @@ import com.nayek.employeemanagementapp.repository.UserRepository;
 
 @Service
 public class UserService {
-	
+
 	@Autowired
 	private UserRepository userRepository;
-	
-	public void createUser(User user)
-	{
+
+	public void createUser(User user) {
 		BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
 		user.setPassword(encoder.encode(user.getPassword()));
 		Role userRole = new Role("USER");
@@ -27,9 +26,8 @@ public class UserService {
 		user.setRoles(roles);
 		userRepository.save(user);
 	}
-	
-	public void createAdmin(User user)
-	{
+
+	public void createAdmin(User user) {
 		BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
 		user.setPassword(encoder.encode(user.getPassword()));
 		Role userRole = new Role("ADMIN");
@@ -38,21 +36,28 @@ public class UserService {
 		user.setRoles(roles);
 		userRepository.save(user);
 	}
-	
-	public User findUserByEmail(String email)
-	{
-		
+
+	public User findUserByEmail(String email) {
+
 		return userRepository.findByEmail(email);
 	}
 
 	public boolean isUserExist(String email) {
-		
-		User user= userRepository.findByEmail(email);
-		if(user!=null)
-		{
+
+		User user = userRepository.findByEmail(email);
+		if (user != null) {
 			return true;
 		}
 		return false;
+	}
+
+	public List<User> findAllUsers() {
+		return userRepository.findAll();
+	}
+
+	public List<User> findUserByName(String name) {
+		// TODO Auto-generated method stub
+		return userRepository.findByNameLike("%" + name + "%");
 	}
 
 }
