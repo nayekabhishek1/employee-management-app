@@ -1,5 +1,6 @@
 package com.nayek.employeemanagementapp.entities;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -21,6 +22,7 @@ public class Task {
 	@NotEmpty
 	private String stopTime;
 	@NotEmpty
+	@Column(length=1000)
 	private String description;
 
 	@ManyToOne
@@ -28,7 +30,6 @@ public class Task {
 	private User user;
 
 	public Task() {
-		super();
 	}
 
 	public Task(String date, String startTime, String stopTime, String description) {

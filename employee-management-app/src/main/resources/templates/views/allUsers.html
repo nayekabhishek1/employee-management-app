@@ -7,7 +7,8 @@
 </head>
 <body>
 	<div layout:fragment="content" class="container topSpace">
-
+<div th:if="${message}" th:text="${message}"
+				th:class="${'alert ' + alertClass}"></div>
 		<form action="/users" class="form-inline">
 			<div class="form-group mb-2">
 				<input type="text" class="form-control" name="name"
@@ -30,13 +31,13 @@
 						<tr th:each="user:${userList}">
 							<td th:text="${user.name}"></td>
 							<td th:text="${user.email}"></td>
-							<td><a href="" class="btn btn-dark btn-sm">Add Task</a></td>
+							<td><a th:href="@{/addTask(email=${user.email})}"
+								class="btn btn-dark btn-sm">Add Task</a></td>
 						</tr>
 					</tbody>
 				</table>
 			</div>
 		</div>
-
 	</div>
 </body>
 </html>
