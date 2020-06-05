@@ -7,8 +7,8 @@
 </head>
 <body>
 	<div layout:fragment="content" class="container topSpace">
-<div th:if="${message}" th:text="${message}"
-				th:class="${'alert ' + alertClass}"></div>
+		<div th:if="${message}" th:text="${message}"
+			th:class="${'alert ' + alertClass}"></div>
 		<form action="/users" class="form-inline">
 			<div class="form-group mb-2">
 				<input type="text" class="form-control" name="name"
@@ -21,6 +21,7 @@
 				<table class="table table-hover">
 					<thead>
 						<tr>
+							<th>Sr. no.</th>
 							<th>Name</th>
 							<th>Email</th>
 							<th>Add</th>
@@ -28,7 +29,8 @@
 					</thead>
 
 					<tbody>
-						<tr th:each="user:${userList}">
+						<tr th:each="user,iterator:${userList}">
+							<td th:text="${iterator.index}+1"></td>
 							<td th:text="${user.name}"></td>
 							<td th:text="${user.email}"></td>
 							<td><a th:href="@{/addTask(email=${user.email})}"
