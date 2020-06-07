@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{fragments/main_layout}">
+<head>
+<title>Error Page</title>
+</head>
+<body>
+	<div layout:fragment="content" class="container">
+		<br> <br> <br>
+		<div class="jumbotron">
+
+			<div>
+				<h1>Something went wrong!</h1>
+				<h2>
+					<span th:text="${message}"></span> | <span th:text="${status}"></span>
+				</h2>
+			</div>
+			<a class="btn btn-dark" href="/home" role="button">Go Home</a>
+		</div>
+	</div>
+</body>
+</html>
