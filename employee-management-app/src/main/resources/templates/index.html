@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org"
-  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-  layout:decorate="~{fragments/main_layout}">
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{fragments/main_layout}">
 <head>
- <title>Index Page</title>
+<title>Index Page</title>
 </head>
 <body>
 	<div layout:fragment="content" class="container">
-		<div class="jumbotron">
-			<p>Hello this is a sample page</p>
-		</div>
+
+		<span class="img-container"> <img th:src="@{/img/img-1.jpeg}"
+			alt="New York">
+
+		</span>
 	</div>
 </body>
 </html>

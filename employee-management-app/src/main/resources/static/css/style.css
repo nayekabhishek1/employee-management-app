@@ -3,11 +3,26 @@
 }
 
 .stickFooter {
-	position: fixed;
+	position: absolute;
 	left: 0;
 	bottom: 0;
 	width: 100%;
 	background-color: black;
 	color: white;
 	text-align: center;
+}
+
+.img-container {
+	text-align: center;
+	display: block;
+}
+
+.img-container img {
+	-webkit-filter: grayscale(90%);
+	filter: grayscale(90%); /* make all photos black and white */
+	max-width: 100%;
+	height: auto;
+	margin: auto;
+	margin-top: 10px;
+	margin-bottom: 50px;
 }

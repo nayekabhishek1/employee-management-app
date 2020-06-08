@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{fragments/main_layout}">
+<head>
+<title>About Page</title>
+<style type="text/css">
+.card {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	max-width: 300px;
+	margin: auto;
+	margin-top: 5px;
+	text-align: center;
+}
+
+.title {
+	color: grey;
+	font-size: 18px;
+}
+
+a {
+	text-decoration: none;
+	font-size: 22px;
+	color: black;
+}
+</style>
+</head>
+<body>
+	<div layout:fragment="content" class="container">
+		<div class="card">
+			<img th:src="@{/img/aboutme.jpg}" alt="Abhishek" style="width: 100%" />
+			<h1>Abhishek Nayek</h1>
+			<p class="title">Software Engineer</p>
+			<p>Siemens</p>
+			<a href="#"><i class="fa fa-linkedin"></i></a> <a href="#"><i
+				class="fa fa-instagram"></i></a> <a href="#"><i
+				class="fa fa-facebook"></i></a>
+		</div>
+	</div>
+</body>
+</html>
