@@ -11,6 +11,7 @@ This is a simple employee management application that contains admin and employe
 
 # Screenshots
 
+1. Project ER diagram
 ![Project ER diagram](/screenshots/ER_Diagram.png)
 
 ![Home page](/screenshots/home_page.png)
@@ -21,7 +22,7 @@ This is a simple employee management application that contains admin and employe
 
 ![Login page](/screenshots/login_page.png)
 
-![Login failure screen](/screenshots/login_failure_page.png
+![Login failure screen](/screenshots/login_failure_page.png)
 
 ![Profile page after employee login(displays list of tasks)](/screenshots/profile_page_after_user_login.png)
 
