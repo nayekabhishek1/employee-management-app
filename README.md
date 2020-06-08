@@ -12,7 +12,7 @@ This is a simple employee management application that contains admin and employe
 # Screenshots
 
 1. Project ER diagram
-![Project ER diagram](/screenshots/ER_Diagram.png)
+![](/screenshots/ER_Diagram.png)
 
 2. Home page
 ![Home page](/screenshots/home_page.png)
@@ -39,7 +39,7 @@ This is a simple employee management application that contains admin and employe
 ![User list page for Admin after login](/screenshots/all_users_list_for_admin.png)
 
 10. Add task form and search functionality for Admin after login
-![Add task form and search functionality for Admin after login](/screenshots/add_task_form.png)
+![Add task form for Admin after login](/screenshots/add_task_form.png)
 
 1. Registration page validation(empty submission)
 ![Registration page validation(empty submission)](/screenshots/registration_validations.png)
